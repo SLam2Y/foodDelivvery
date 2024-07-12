@@ -1,0 +1,72 @@
+.content{
+    
+    background-color: var(--color-orange-0);
+    
+}
+
+.hero{
+    
+    display: flex;
+    flex-direction: column;
+    
+    &__main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 30px;
+        @include mobile{
+            flex-direction: column;
+        }
+        
+    }
+
+    
+
+    &__title{
+        color: black;
+        @include mobile{
+            order:-2;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__discription{
+        @include mobile{
+            margin-bottom: 40px;
+        }
+    }
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        
+        @include mobile{
+            display: contents;
+        }
+        
+        .span{
+            color:#FFCB45;
+        }
+        &__discription{
+            color: var(--color-gray);
+
+        }
+
+    }
+    &__img{
+        
+        @include tablet{
+            max-width: 40%;
+            height: auto;
+        }
+        @include mobile{
+            order: -1;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        
+    }
+}

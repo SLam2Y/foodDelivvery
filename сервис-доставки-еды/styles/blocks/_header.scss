@@ -1,0 +1,137 @@
+
+
+.header{
+    
+    padding-top: 34px;
+    background-color: var(--color-orange-0);
+
+    @include desctop{
+        padding-top: 20px;}
+        @include mobile{
+            padding-top: 15px;
+        }
+
+
+    &__inner{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablet{
+           column-gap: 30px;
+        }
+        
+        .logo{
+            display: flex;
+            @include tablet{
+                max-width: 120px;
+            }
+            @include mobile{
+                min-width: 167px;
+            }
+        }
+
+        .header__buttons-3{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 30px;
+            .header__button-signin{
+                display: flex;
+                gap: 20px;
+            }
+        }
+        
+        
+    }
+    &__menu{
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        @include desctop{
+            font-size: 18px;
+        }
+        @include tablet{
+            font-size: 16px;
+        }
+        
+
+        &-list{
+            display: flex;
+            align-items: center;
+            column-gap: 40px;
+            @include desctop {
+                column-gap: 20px;
+
+            }
+            
+        }
+        &-linc{
+            position: relative;
+            display: inline-flex ;
+            align-items: center;
+            height: 48px;
+            white-space: nowrap;//не даёт тексту перескакивать при изменении масштаба
+            color: var(--color-gray);
+            @include hover {
+                color: black;
+                &::after {
+                    
+                    width: 100%; /* Растягиваем линию на всю ширину элемента */
+                }
+            }
+            
+            /* Базовые стили для псевдоэлемента */
+            &::after {
+                content: ''; /* Добавляем пустое содержимое, чтобы псевдоэлемент был видимым */
+                position: absolute; /* Позиционируем псевдоэлемент абсолютно относительно родительского элемента */
+                top: 100%; /* Размещаем псевдоэлемент над верхней границей родительского элемента */
+                left: 50%; /* Располагаем псевдоэлемент по горизонтали в середине родительского элемента */
+                translate: -50%; /* Смещаем псевдоэлемент влево на половину его ширины, чтобы он был по центру */
+                width: 0; /* Изначально устанавливаем нулевую ширину для линии */
+                height: 4px; /* Устанавливаем высоту линии */
+                background-color: #FFCB45; /* Задаем цвет линии */
+                border-radius: 5px;
+                transition-duration: inherit; /* Наследуем продолжительность анимации от родительского элемента */
+                
+            }
+            
+        }
+        
+                
+    }
+    &__first-item{
+       position: relative;
+        
+    }
+    &__button{
+        cursor: pointer;
+            &-serch{
+                background-color: transparent;
+                border: none;
+            }
+            &-cart{
+                position: relative;
+                background-color: transparent;
+                border: none;
+                
+                /**
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background-color: var(--color-orange-first);
+                   
+                }
+                */
+                
+
+                
+            
+    }
+    }
+}

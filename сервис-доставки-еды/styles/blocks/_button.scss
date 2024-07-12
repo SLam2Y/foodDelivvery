@@ -1,0 +1,17 @@
+.button{
+    @include flex-center(true);
+    height: var(--button-hight);
+    padding-inline: 30px;
+    font-size: 14px;
+    color: var(--color-black);
+    background-color: var(--color-orange-first);
+    border: none;
+    border-radius: var(--border-radius-large);
+    font-weight: 700;
+    white-space: nowrap;
+    @include hover {
+        background-color: var(--color-orange-second);
+    }
+    cursor: pointer;
+
+}

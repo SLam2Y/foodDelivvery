@@ -1,0 +1,24 @@
+.content{
+    @include tablet{
+        background-position: 0% 100%, 0% 93%;
+        
+    }
+    @include mobile{
+        background-position: 0% 100%, 0% 96%;
+    }
+    background-image: url(../imag/Rectangle14.png),url(../imag/Rectangle13.png);
+    background-repeat:no-repeat ;
+    background-position: 0% 100%, 0% 95%;
+    
+
+    
+}
+
+.section{
+    
+    
+    padding-block: 60px 0px;
+    
+   
+    
+}
